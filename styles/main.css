@@ -50,7 +50,7 @@ main {
 }
 
 .input-field {
-    width: 500px;
+    width: min(90vw, 500px);
     margin-top: 30px;
     padding: 12px;
     border-radius: 20px;
@@ -80,4 +80,35 @@ footer {
 
 footer a {
     color: rgb(140, 140, 140);
+}
+
+footer div {
+    flex-grow: 1;
+}
+
+@media (max-width: 780px) {
+    footer {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    footer div {
+        flex-grow: 0;
+        width: 90vw;
+    }
+}
+
+@media (max-width: 490px) {
+    .container {
+        grid-template-rows: 10% 75% 15%;
+    }
+
+    footer div {
+        visibility: collapse;
+    }
+
+    #better-position {
+        width: 90vw;
+        text-align: center;
+    }
 }
